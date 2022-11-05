@@ -1,42 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-
-  <title>Space Dynamic - SEO HTML5 Template</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-
-  <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="../../assets/css/fontawesome.css">
-  <link rel="stylesheet" href="../../assets/css/templatemo-space-dynamic.css">
-  <link rel="stylesheet" href="../../assets/css/animated.css">
-  <link rel="stylesheet" href="../../assets/css/owl.css">
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
-  <!--
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
+  
+    <title>INICIO</title>
+  
+    <!-- Bootstrap core CSS -->
+    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  
+  
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../../assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../../assets/css/css.css">
+    <link rel="stylesheet" href="../../assets/css/animated.css">
+    <link rel="stylesheet" href="../../assets/css/owl.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/cssBootstrap.css">
     
-TemplateMo 562 Space Dynamic
-
-https://templatemo.com/tm-562-space-dynamic
-
--->
-</head>
+  </head>
 
 <body>
 
@@ -68,12 +62,12 @@ https://templatemo.com/tm-562-space-dynamic
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="#top" class="active">INICIO</a></li>
-              <li class="scroll-to-section"><a href="#about">QUIZ</a></li>
-              <li class="scroll-to-section"><a href="#services">ESTATÍSTICA</a></li>
-              <li class="scroll-to-section"><a href="#portfolio">QUEBRA CABEÇA</a></li>
-              <li class="scroll-to-section"><a href="#blog">MAIS INFORMAÇÕES</a></li>
-              <li class="scroll-to-section"><a href="#blog">MAIS INFORMAÇÕES</a></li>
+              <li class="scroll-to-section"><a onclick="redireciona('inicio.html')">INICIO</a></li>
+              <li class="scroll-to-section"><a onclick="redireciona('quiz.html')">QUIZ</a></li>
+              <li class="scroll-to-section"><a onclick="redireciona('estatistica.html')" class="active">ESTATÍSTICA</a></li>
+              <li class="scroll-to-section"><a onclick="redireciona('quebra_cabeca.html')">QUEBRA CABEÇA</a></li>
+              <li class="scroll-to-section"><a onclick="redireciona('informacoes.html')">MAIS INFORMAÇÕES</a></li>
+              <li class="scroll-to-section"><a></a></li>
               <!-- <li class="scroll-to-section"><div class="main-red-button"><a href="#contact">Contact Now</a></div></li>  -->
             </ul>
             <a class='menu-trigger'>
@@ -147,9 +141,7 @@ https://templatemo.com/tm-562-space-dynamic
     <div class="container">
       <div class="row">
         <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.25s">
-          <p>© Copyright 2021 Space Dynamic Co. All Rights Reserved.
-
-            <br>Design: <a rel="nofollow" href="https://templatemo.com">TemplateMo</a>
+          <p>Breno Fernandes, Carlos Eduardo, Felipe Nogueira
           </p>
         </div>
       </div>
@@ -162,7 +154,11 @@ https://templatemo.com/tm-562-space-dynamic
   <script src="../../assets/js/animation.js"></script>
   <script src="../../assets/js/imagesloaded.js"></script>
   <script src="../../assets/js/templatemo-custom.js"></script>
-
+  <script>
+    function redireciona(endereco) {
+      window.location.href= endereco
+    }
+  </script>
 </body>
 
 </html>
