@@ -30,7 +30,14 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/cssBootstrap.css">
     
-  </head>
+      <!-- Scripts -->
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/owl-carousel.js"></script>
+    <script src="../../assets/js/animation.js"></script>
+    <script src="../../assets/js/imagesloaded.js"></script>
+    <script src="../../assets/js/templatemo-custom.js"></script>
+    </head>
 
 <body>
 
@@ -97,20 +104,76 @@
                         <!-- jquery validation -->
                         <div class="card card-olive">
                           <div class="card-header">
-                            <h3 class="card-title">Exemplo de tópico<small> Brasil</small></h3>
+                            <h3 class="card-title">ESTATÍSTICAS EM DEFESA DAS URNAS ELETRÔNICAS</h3>
                           </div>
                           <!-- /.card-header -->
                           <!-- form start -->
                           <form id="quickForm">
                             <div class="card-body">
                               <div class="form-group">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque enim est dignissimos voluptatum odio nisi iure officia deserunt eius! Accusamus, quasi illo voluptatum inventore harum perspiciatis eligendi dolores vel id.</p>
+                                <h2>Fake news: Só 3 países utilizam urnas eletrônicas.</h2>
+                                <p>Existe uma fake news que vem circulando nas redes sociais afirmando que somente três países adotam meios eletrônicos de votação. A informação é falsa! Segundo o 
+                                  <a href="https://www.idea.int/data-tools/question-view/742">levantamento feito pelo IDEA</a> (Institute for Democracy and Electoral Assistance),
+                                   existem pelo menos 49 países que utilizam o voto eletrônico em algum tipo de eleição. Canadá, Congo e Estônia são exemplos de países que adotam a urna eletrônica.</p>
+                                <!-- gráfico -->
+                                <canvas id="myChart" width="300" height="300"></canvas>
+                                <script src="../../node_modules/chart.js/dist/chart.js"></script>
+                                <script>
+                                  var opt = [143, 28, 17, 4, 1]
+                                  var opt_labels = ['Não',
+                                                    'Sim, em eleições nacionais politicamente vinculativas',
+                                                    'Sim, em eleições subnacionais politicamente vinculativas',
+                                                    'Sim, em outras eleições com participação do EMB',
+                                                    'Sem dados'
+                                                    ]
+                                  const ctx = document.getElementById('myChart').getContext('2d');
+                                  const myChart = new Chart(ctx, {
+                                      type: 'bar',
+                                      data: {
+                                          labels: opt_labels,
+                                          datasets: [{
+                                              label: 'O voto eletrônico é atualmente usado em qualquer eleição com orgão de gestão eleitoral (EMB)?',
+                                              data: opt,
+                                              backgroundColor: [
+                                                  'rgba(255, 99, 132, 0.2)',
+                                                  'rgba(54, 162, 235, 0.2)',
+                                                  'rgba(255, 206, 86, 0.2)',
+                                                  'rgba(75, 192, 192, 0.2)',
+                                                  'rgba(153, 102, 255, 0.2)',
+                                                  'rgba(255, 159, 64, 0.2)'
+                                              ],
+                                              borderColor: [
+                                                  'rgba(255, 99, 132, 1)',
+                                                  'rgba(54, 162, 235, 1)',
+                                                  'rgba(255, 206, 86, 1)',
+                                                  'rgba(75, 192, 192, 1)',
+                                                  'rgba(153, 102, 255, 1)',
+                                                  'rgba(255, 159, 64, 1)'
+                                              ],
+                                              borderWidth: 2
+                                          }]
+                                      },
+                                      options: {
+                                        plugins: {
+                                          title: {
+                                            display: true,
+                                            text: 'Número de países que utilizam o voto eletrônico em suas eleições.'
+                                          },
+                                      },
+                                          scales: {
+                                              y: {
+                                                  beginAtZero: true
+                                              }
+                                          }
+                                      }
+                                  });
+                                  </script>
                               </div>
                               <div class="form-group">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque enim est dignissimos voluptatum odio nisi iure officia deserunt eius! Accusamus, quasi illo voluptatum inventore harum perspiciatis eligendi dolores vel id.</p>
                               </div>
                               <div class="form-group">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque enim est dignissimos voluptatum odio nisi iure officia deserunt eius! Accusamus, quasi illo voluptatum inventore harum perspiciatis eligendi dolores vel id.</p>
+                                <p>Loresdsdsdsdsdsm ipsum dolor sit amet consectetur adipisicing elit. Atque enim est dignissimos voluptatum odio nisi iure officia deserunt eius! Accusamus, quasi illo voluptatum inventore harum perspiciatis eligendi dolores vel id.</p>
                                 <img src="../../assets/images/bandeira-nacional-brasil.jpg"
                 style="width: 200px; height: 100px;" alt="team meeting">
                               </div>
@@ -147,13 +210,7 @@
       </div>
     </div>
   </footer>
-  <!-- Scripts -->
-  <script src="../../vendor/jquery/jquery.min.js"></script>
-  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../../assets/js/owl-carousel.js"></script>
-  <script src="../../assets/js/animation.js"></script>
-  <script src="../../assets/js/imagesloaded.js"></script>
-  <script src="../../assets/js/templatemo-custom.js"></script>
+
   <script>
     function redireciona(endereco) {
       window.location.href= endereco
