@@ -30,6 +30,20 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/cssBootstrap.css">
     
+    <!-- Style for especifics containers-->
+    <style>
+        .flex-container {
+          margin: 5%;
+          display: grid;
+          grid-template-columns: 50% 50%;
+          grid-template-rows: 50% 50%;
+        }
+        .beetween_graphs{
+          margin-top: 5%;
+        }
+    </style>
+
+
       <!-- Scripts -->
     <script src="../../vendor/jquery/jquery.min.js"></script>
     <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -117,6 +131,18 @@
                                    existem pelo menos 49 países que utilizam o voto eletrônico em algum tipo de eleição. Canadá, Congo e Estônia são exemplos de países que adotam a urna eletrônica.</p>
                                 <!-- gráfico -->
                                 <canvas id="myChart" width="300" height="300"></canvas>
+                                <p class="beetween_graphs">Abaixo temos mais estátisticas mostrando o número de países por continente que realizam o voto eletrônico
+                                  em determinado tipo de eleição, incluindo os de que não se têm dados.
+                                </p>
+                                 <!-- grid-gráficos -->
+                                <div class="flex-container">    
+                                  <div><canvas id="myChart2" width="100" height="100"></canvas></div>    
+                                  <div><canvas id="myChart3" width="100" height="100"></canvas></div>    
+                                  <div><canvas id="myChart4" width="100" height="100"></canvas></div> 
+                                  <div><canvas id="myChart5" width="100" height="100"></canvas></div> 
+                                </div>
+
+                                <!-- code -->
                                 <script src="../../node_modules/chart.js/dist/chart.js"></script>
                                 <script>
                                   var opt = [143, 28, 17, 4, 1]
@@ -167,7 +193,46 @@
                                           }
                                       }
                                   });
+
+                                  const data_teste = {
+                                    labels: [
+                                      'Red',
+                                      'Blue',
+                                      'Yellow'
+                                    ],
+                                    datasets: [{
+                                      label: 'My First Dataset',
+                                      data: [300, 50, 100],
+                                      backgroundColor: [
+                                        'rgb(255, 99, 132)',
+                                        'rgb(54, 162, 235)',
+                                        'rgb(255, 205, 86)'
+                                      ],
+                                      hoverOffset: 4
+                                    }]
+                                  };
+
+                                  const config = {
+                                    type: 'doughnut',
+                                    data: data_teste,
+                                  };
+
+                                  const ctx2 = document.getElementById('myChart2').getContext('2d');
+                                  const ctx3 = document.getElementById('myChart3').getContext('2d');
+                                  const ctx4 = document.getElementById('myChart4').getContext('2d');
+                                  const ctx5 = document.getElementById('myChart5').getContext('2d');
+
+                                  const myChart2 = new Chart(ctx2,config);
+                                  const myChart3 = new Chart(ctx3,config);
+                                  const myChart4 = new Chart(ctx4,config);
+                                  const myChart5 = new Chart(ctx5,config);
+
                                   </script>
+
+
+
+
+
                               </div>
                               <div class="form-group">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque enim est dignissimos voluptatum odio nisi iure officia deserunt eius! Accusamus, quasi illo voluptatum inventore harum perspiciatis eligendi dolores vel id.</p>
