@@ -134,7 +134,7 @@ function update() {
         return;
     }
     
-    //start processing guess
+    //começa o processo de adivinhar
     let correct = 0;
 
     let letterCount = {}; //verifica a frequencia que aparece uma letra, ex) KENNY -> {K:1, E:1, N:2, Y: 1}
