@@ -40,7 +40,6 @@
 
 <body>
 
-  <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
       <span class="dot"></span>
@@ -51,22 +50,17 @@
       </div>
     </div>
   </div>
-  <!-- ***** Preloader End ***** -->
 
-  <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <nav class="main-nav">
-            <!-- ***** Logo Start ***** -->
             <a href="index.html" class="logo" style="display: flex; ">
               <img src="../../assets/images/bandeira-nacional-brasil.jpg"
                 style="width: 30px; height: 20px; margin-top: 40px; margin-right: 10px;" alt="team meeting">
               <h4>Urnas<span> BRASIL</span></h4>
             </a>
-            <!-- ***** Logo End ***** -->
-            <!-- ***** Menu Start ***** -->
             <ul class="nav">
               <li class="scroll-to-section"><a onclick="redireciona('inicio.html')" class="pointer-link">INICIO</a></li>
               <li class="scroll-to-section"><a onclick="redireciona('quiz.html')" class="active">QUIZ</a></li>
@@ -76,18 +70,15 @@
               <li class="scroll-to-section"><a onclick="redireciona('informacoes.html')" class="pointer-link">MAIS
                   INFORMAÇÕES</a></li>
               <li class="scroll-to-section"><a></a></li>
-              <!-- <li class="scroll-to-section"><div class="main-red-button"><a href="#contact">Contact Now</a></div></li>  -->
             </ul>
             <a class='menu-trigger'>
               <span>Menu</span>
             </a>
-            <!-- ***** Menu End ***** -->
           </nav>
         </div>
       </div>
     </div>
   </header>
-  <!-- ***** Header Area End ***** -->
 
   <div>
     <div class="container">
@@ -100,10 +91,8 @@
                   Você acertou <span id="quiz-percent"></span>% - <span id="quiz-score"></span>/<span
                     id="quiz-max-score"></span><br />
                 </div>
-            
-                <!-- Quiz Container -->
                 <div id="quiz">
-                  <!-- Question 1 -->
+                  <!-- primeira questão -->
                   <div class="card quizlib-question">
                     <div class="quizlib-question-title">1. Faz o L!
                     </div>
@@ -111,7 +100,7 @@
                       <input type="text" name="q1">
                     </div>
                   </div>
-                  <!-- Question 2 -->
+                  <!-- segunda questão -->
                   <div class="card quizlib-question">
                     <div class="quizlib-question-title">2. É 22 É...?</div>
                     <div class="quizlib-question-answers">
@@ -121,7 +110,7 @@
                       </ul>
                     </div>
                   </div>
-                  <!-- Question 3 -->
+                  <!-- terceira questão -->
                   <div class="card quizlib-question">
                     <div class="quizlib-question-title">3. Qual desses Países usa cédulas de papel para votar?</div>
                     <div class="quizlib-question-answers">
@@ -132,7 +121,7 @@
                       </ul>
                     </div>
                   </div>
-                  <!-- Question 4 -->
+                  <!-- quarta questão -->
                   <div class="card quizlib-question">
                     <div class="quizlib-question-title">4. Em que ano a urna eletrônica foi implantada no Brasil?</div>
                     <div class="quizlib-question-answers">
@@ -144,7 +133,7 @@
                       </ul>
                     </div>
                   </div>
-                  <!-- Question 5 -->
+                  <!-- quinta questão -->
                   <div class="card quizlib-question">
                     <div class="quizlib-question-title">5. Marque as opções VERDADEIRAS sobre a urna eletrônica</div>
                     <div class="quizlib-question-answers">
@@ -156,8 +145,8 @@
                       </ul>
                     </div>
                   </div>
-                  <!-- Answer Button -->
-                  <button type="button" onclick="showResults();">Check Answers</button>
+                  <!-- botão de responder -->
+                  <button type="button" onclick="showResults()">Check Answers</button>
                 </div>
               </div>
             </div>

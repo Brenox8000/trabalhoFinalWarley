@@ -1,0 +1,63 @@
+
+        .flex-container {
+          margin: 5%;
+          display: grid;
+          grid-template-columns: 50% 50%;
+          grid-template-rows: 50% 50%;
+        }
+        .beetween_graphs{
+          margin-top: 5%;
+        }
+        .chart-title {
+          text-align: center;
+          margin-top: 5%;
+        }
+        .boxed {
+          grid-area: InfoArea;
+          border: 1px solid rgba(0, 0, 0, 0.186) ;
+          background: linear-gradient(to right,rgba(0, 128, 0, 0.552),rgba(0, 128, 0, 0.825));
+          border-radius: 4px;
+          margin-left: 0%;
+          margin-right: 0%;
+        }
+        .card-1{
+          grid-area: Card1Area;
+          border-radius: 10px;
+        }
+        .card-2{
+          grid-area: Card2Area;
+          border-radius: 10px;
+        }
+        .card-3{
+          grid-area: Card3Area;
+          border-radius: 10px;
+        }
+        .text-card{
+          margin: 10%;
+          text-align: center;
+          color: azure;
+          font-size: 180%;
+        }
+        .title-card{
+          margin-top: 5%;
+          text-align: center;
+          color: aliceblue;
+        }
+        .text-box-cita{
+          font-size: 120%;
+          margin: 3%;
+          color: azure;
+        }
+        p{
+          font-size: 115%
+        }
+        .dashboard-container{
+          display: grid;
+          grid-gap: 9px;
+          grid-template-columns: 70% 30%;
+          grid-template-rows: 30% 30% 40%;
+          grid-template-areas: 
+          'InfoArea Card1Area'
+          'InfoArea Card2Area'
+          'InfoArea Card3Area';
+        }
