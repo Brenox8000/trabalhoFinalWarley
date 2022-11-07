@@ -6,3 +6,7 @@
 {
     display:inline;
 }
+.justificaTexto{
+    text-align:justify;
+    text-justify:auto;
+  }

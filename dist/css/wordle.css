@@ -9,6 +9,10 @@ hr {
     justify-content: center;
     align-items: center;
 }
+.justificaTexto{
+    text-align:center ;
+    text-justify:center;
+  }
 
 #title {
     font-size: 36px;
