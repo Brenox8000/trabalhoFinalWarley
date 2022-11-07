@@ -45,6 +45,56 @@
           text-align: center;
           margin-top: 5%;
         }
+        .boxed {
+          grid-area: InfoArea;
+          border: 1px solid rgba(0, 0, 0, 0.186) ;
+          background: linear-gradient(to right,rgba(0, 128, 0, 0.552),rgba(0, 128, 0, 0.825));
+          border-radius: 4px;
+          margin-left: 0%;
+          margin-right: 0%;
+        }
+        .card-1{
+          grid-area: Card1Area;
+          border-radius: 10px;
+        }
+        .card-2{
+          grid-area: Card2Area;
+          border-radius: 10px;
+        }
+        .card-3{
+          grid-area: Card3Area;
+          border-radius: 10px;
+        }
+        .text-card{
+          margin: 10%;
+          text-align: center;
+          color: azure;
+          font-size: 180%;
+        }
+        .title-card{
+          margin-top: 5%;
+          text-align: center;
+          color: aliceblue;
+        }
+        .text-box-cita{
+          font-size: 120%;
+          margin: 3%;
+          color: azure;
+        }
+        p{
+          font-size: 115%
+        }
+        .dashboard-container{
+          display: grid;
+          grid-gap: 9px;
+          grid-template-columns: 70% 30%;
+          grid-template-rows: 30% 30% 40%;
+          grid-template-areas: 
+          'InfoArea Card1Area'
+          'InfoArea Card2Area'
+          'InfoArea Card3Area';
+        }
+
     </style>
 
 
@@ -106,7 +156,6 @@
   </header>
   <!-- ***** Header Area End ***** -->
 
- 
   <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
     <div class="container">
       <div class="row">
@@ -129,7 +178,7 @@
                           <form id="quickForm">
                             <div class="card-body">
                               <div class="form-group">
-                                <h2>Fake news - "Só 3 países utilizam urnas eletrônicas".</h2>
+                                <h2>Fake news - "Somente 3 países utilizam urnas eletrônicas".</h2>
                                 <p>Existe uma fake news que vem circulando nas redes sociais afirmando que somente três países adotam meios eletrônicos de votação. A informação é falsa! Segundo o 
                                   <a href="https://www.idea.int/data-tools/question-view/742">levantamento feito pelo IDEA</a> (Institute for Democracy and Electoral Assistance),
                                    existem pelo menos 49 países que utilizam o voto eletrônico em algum tipo de eleição. Canadá, Congo e Estônia são exemplos de países que adotam a urna eletrônica.</p>
@@ -157,6 +206,47 @@
                                     <canvas id="myChart5" width="100" height="100"></canvas>
                                   </div> 
                                 </div>
+                                <h2>Fake news - "O custo da informatização do sistema de votação no Brasil é muito alto e, portanto, seria mais conveniente o retorno ao modelo anterior, com o uso de cédulas de papel”.</h2>
+                                <p>Segundo o ministro Carlos Mário da Silva Velloso, em uma entrevista no livro <a href="http://eje.tre-ba.jus.br/pluginfile.php/15413/mod_page/content/38/25-anos-da-urna-eletronica-digital.pdf">“25 anos da Urna Eletrônica”</a>, essa afirmação não é verdadeira.</p>
+                                
+                                <div class="dashboard-container">
+                                  <div class="boxed">
+                                    <div class="text-box-cita">“E a economia não sofre com os desgastes que uma longa apuração sempre traz. Em pesquisa feita pelo técnico Paulo Camarão, tem-se o seguinte quadro: nas últimas eleições, foram gastos cerca de 670 milhões de reais. Cada voto custou, portanto, R$4,79, produto da divisão de 670 milhões por 140 milhões de eleitores. Se tivesse ocorrido a aquisição de 50 mil urnas, que é o número previsto para reposição, em cada eleição, o custo do voto teria sido de R$6,57, ou seja, cerca de US$1,22. Esse custo é bem razoável. Aliás, em três eleições realizadas, não houve reposição de urnas. Vejamos, agora, o voto em papel. Na época do voto em papel, segundo o “Dicionário Parlamentar e Político”, tínhamos 4.460 Juntas Apuradoras e 42.238 Turmas de Apuração. Cada Turma era composta por um mínimo de quatro escrutinadores, num total de 168.952 escrutinadores, que eram servidores públicos, bancários, professores da rede pública e outros profissionais qualificados. Considerando que, na melhor das hipóteses, a apuração terminasse em sete dias, e que cada convocado tivesse direito de folgar o dobro dos dias trabalhados, teríamos um total de 21 dias de afastamento de suas funções, sem prejuízo de sua remuneração. Sejamos otimistas, vamos considerar apenas quinze dias de afastamento. Considerando que cada servidor ganhasse uma média de R$4.000,00/mês (não estamos considerando os tributos pagos pelo empregador), teríamos um custo de R$2.000,00 por escrutinador, que, multiplicado por 168.952, daria um custo total de R$337.904.000,00. Isto, sem considerar despesas com alimentação. Acresça, ao número de escrutinadores, o número de juízes, promotores, fiscais de partidos e as forças de segurança (Polícia Militar, Exército). Seguramente teríamos um contingente envolvido na apuração de cerca de 250 mil pessoas, que, ao custo de dois mil por pessoa, totalizaria cerca de 500 milhões de reais, quantia bem superior ao gasto previsto de 250 milhões para reposição de 50 mil urnas a cada eleição. É dizer, com a eliminação da mão humana na apuração dos votos, tivemos uma redução de cerca de 250 milhões de reais nos custos de uma eleição geral. Não há falar, portanto, em aumento de custos com o voto informatizado relativamente ao voto com cédula de papel.”</div>                            
+                                  </div>
+
+                                  <div style="background: linear-gradient(to right,rgba(255, 99, 132, 0.2),rgba(255, 99, 133, 0.86))" class="card-1">
+                                    <div class="title-card">
+                                      <h4>CUSTO DO VOTO A CADA ELEIÇÂO</h4>
+                                    </div>
+                                    <div class="text-card">
+                                      R$ 6,57/voto
+                                    </div>
+                                  </div>
+                                  
+                                  <div style="background: linear-gradient(to right,rgba(255, 159, 64, 1),rgb(255, 160, 64))" class="card-2">
+                                    <div class="title-card">
+                                      <h4>SEM MÃOS HUMANAS NAS APURAÇÕES REDUZ-SE</h4>
+                                    </div>
+                                    <div class="text-card">
+                                      R$ 250 milhões
+                                    </div>
+                                  </div>
+
+                                  <div style="background: linear-gradient(to right,rgba(0, 112, 240, 0.574),rgb(18, 119, 235))" class="card-3">
+                                    <div class="title-card">
+                                      <h4>GASTOS COM MÃO DE OBRA HUMANA (ELETRÔNICO X PAPEL)</h4>
+                                    </div>
+                                    <div class="text-card">
+                                      URNA ELETRÔNICA: R$ 250 milhões
+                                      VOTO IMPRESSO: R$ 250 milhões
+                                    </div>
+                                  
+                                  </div>
+
+                                </div>
+
+                                
+
 
                                 <!-- code -->
                                 <script src="../../node_modules/chart.js/dist/chart.js"></script>
