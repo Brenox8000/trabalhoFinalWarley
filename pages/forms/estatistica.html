@@ -41,6 +41,10 @@
         .beetween_graphs{
           margin-top: 5%;
         }
+        .chart-title {
+          text-align: center;
+          margin-top: 5%;
+        }
     </style>
 
 
@@ -132,14 +136,26 @@
                                 <!-- gráfico -->
                                 <canvas id="myChart" width="300" height="300"></canvas>
                                 <p class="beetween_graphs">Abaixo temos mais estátisticas mostrando o número de países por continente que realizam o voto eletrônico
-                                  em determinado tipo de eleição, incluindo os de que não se têm dados.
+                                  em determinado tipo de eleição.
                                 </p>
                                  <!-- grid-gráficos -->
                                 <div class="flex-container">    
-                                  <div><canvas id="myChart2" width="100" height="100"></canvas></div>    
-                                  <div><canvas id="myChart3" width="100" height="100"></canvas></div>    
-                                  <div><canvas id="myChart4" width="100" height="100"></canvas></div> 
-                                  <div><canvas id="myChart5" width="100" height="100"></canvas></div> 
+                                  <div>
+                                    <h5 class="chart-title">Sim, em eleições nacionais</h5>
+                                    <canvas id="myChart2" width="100" height="100"></canvas>
+                                  </div>    
+                                  <div>
+                                    <h5 class="chart-title">Sim, em eleições subnacionais</h5>
+                                    <canvas id="myChart3" width="100" height="100"></canvas>
+                                  </div>    
+                                  <div>
+                                    <h5 class="chart-title">Sim, em outras eleições</h5>
+                                    <canvas id="myChart4" width="100" height="100"></canvas>
+                                  </div> 
+                                  <div>
+                                    <h5 class="chart-title">Não, em nenhum tipo de eleição</h5>
+                                    <canvas id="myChart5" width="100" height="100"></canvas>
+                                  </div> 
                                 </div>
 
                                 <!-- code -->
@@ -185,7 +201,7 @@
                                             display: true,
                                             text: 'Número de países que utilizam o voto eletrônico em suas eleições.'
                                           },
-                                      },
+                                        },
                                           scales: {
                                               y: {
                                                   beginAtZero: true
@@ -212,20 +228,124 @@
                                     }]
                                   };
 
+                                  const data_1 = {
+                                    labels: [
+                                      'África',
+                                      'Américas',
+                                      'Ásia',
+                                      'Europa',
+                                      'Oceania'
+                                    ],
+                                    datasets: [{
+                                      data: [2, 8, 11, 6, 1],
+                                      backgroundColor: [
+                                        'rgb(255, 99, 132)',
+                                        'rgb(54, 162, 235)',
+                                        'rgb(255, 205, 86)',
+                                        'rgba(75, 192, 192)',
+                                        'rgba(153, 102, 255)',
+                                        'rgba(255, 159, 64)'
+                                      ],
+                                      hoverOffset: 1
+                                    }]
+                                  };
+                                  
+                                  const data_2 = {
+                                    labels: [
+                                      'África',
+                                      'Américas',
+                                      'Ásia',
+                                      'Europa',
+                                      'Oceania'
+                                    ],
+                                    datasets: [{
+                                      data: [0, 7, 5, 4, 1],
+                                      backgroundColor: [
+                                        'rgb(255, 99, 132)',
+                                        'rgb(54, 162, 235)',
+                                        'rgb(255, 205, 86)',
+                                        'rgba(75, 192, 192)',
+                                        'rgba(153, 102, 255)',
+                                        'rgba(255, 159, 64)'
+                                      ],
+                                      hoverOffset: 1,                                 
+                                    }]
+                                  };                 
+                                  
+                                  const data_3 = {
+                                    labels: [
+                                      'África',
+                                      'Américas',
+                                      'Ásia',
+                                      'Europa',
+                                      'Oceania'
+                                    ],
+                                    datasets: [{
+                                      data: [0, 1, 1, 1, 1],
+                                      backgroundColor: [
+                                        'rgb(255, 99, 132)',
+                                        'rgb(54, 162, 235)',
+                                        'rgb(255, 205, 86)',
+                                        'rgba(75, 192, 192)',
+                                        'rgba(153, 102, 255)',
+                                        'rgba(255, 159, 64)'
+                                      ],
+                                      hoverOffset: 1,                                 
+                                    }]
+                                  };
+                                  
+                                                                    
+                                  const data_4 = {
+                                    labels: [
+                                      'África',
+                                      'Américas',
+                                      'Ásia',
+                                      'Europa',
+                                      'Oceania'
+                                    ],
+                                    datasets: [{
+                                      data: [48, 14, 31, 38, 12],
+                                      backgroundColor: [
+                                        'rgb(255, 99, 132)',
+                                        'rgb(54, 162, 235)',
+                                        'rgb(255, 205, 86)',
+                                        'rgba(75, 192, 192)',
+                                        'rgba(153, 102, 255)',
+                                        'rgba(255, 159, 64)'
+                                      ],
+                                      hoverOffset: 1,                                 
+                                    }]
+                                  };
+
                                   const config = {
                                     type: 'doughnut',
                                     data: data_teste,
                                   };
-
+                                  const config_1 = {
+                                    type: 'doughnut',
+                                    data: data_1,
+                                  };
+                                  const config_2 = {
+                                    type: 'doughnut',
+                                    data: data_2,
+                                  };
+                                  const config_3 = {
+                                    type: 'doughnut',
+                                    data: data_3,
+                                  };
+                                  const config_4 = {
+                                    type: 'doughnut',
+                                    data: data_4,
+                                  };
                                   const ctx2 = document.getElementById('myChart2').getContext('2d');
                                   const ctx3 = document.getElementById('myChart3').getContext('2d');
                                   const ctx4 = document.getElementById('myChart4').getContext('2d');
                                   const ctx5 = document.getElementById('myChart5').getContext('2d');
 
-                                  const myChart2 = new Chart(ctx2,config);
-                                  const myChart3 = new Chart(ctx3,config);
-                                  const myChart4 = new Chart(ctx4,config);
-                                  const myChart5 = new Chart(ctx5,config);
+                                  const myChart2 = new Chart(ctx2,config_1);
+                                  const myChart3 = new Chart(ctx3,config_2);
+                                  const myChart4 = new Chart(ctx4,config_3);
+                                  const myChart5 = new Chart(ctx5,config_4);
 
                                   </script>
 
